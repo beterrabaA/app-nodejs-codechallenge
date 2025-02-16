@@ -1,13 +1,11 @@
-FROM node:22.13-slim
+FROM node:22.14-alpine3.21
 
 WORKDIR /app
 
-COPY package.json /app
+COPY . .
 
 RUN npm install
 
 RUN npm run build
 
-COPY . /app
-
-CMD [ "npm",'start' ]
+ENTRYPOINT ["node", ".dist/index.js"]
