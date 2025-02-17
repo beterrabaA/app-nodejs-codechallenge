@@ -31,3 +31,9 @@ services:
     networks:
       - prisma-network
       - broker-network
+
+networks:
+  prisma-network:
+    name: prisma-network
+  broker-network:
+    name: broker-network
