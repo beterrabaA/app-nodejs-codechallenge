@@ -1,0 +1,45 @@
+{
+  "name": "app-nodejs-codechallenge",
+  "version": "1.0.0",
+  "description": "Our code challenge will let you marvel us with your Jedi coding skills :smile:.",
+  "main": ".dist/index.js",
+  "scripts": {
+    "start": "node .dist/index.js",
+    "postinstall": "prisma generate",
+    "dev": "node --import=tsx --watch-path=./src ./src/index.ts",
+    "build": "npx tsc",
+    "db:deploy": "npx prisma migrate deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beterrabaA/app-nodejs-codechallenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/beterrabaA/app-nodejs-codechallenge/issues"
+  },
+  "homepage": "https://github.com/beterrabaA/app-nodejs-codechallenge#readme",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/module-alias": "^2.0.4",
+    "@types/node": "^22.13.1",
+    "prisma": "^6.3.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.3.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "graphql": "^16.10.0",
+    "graphql-http": "^1.22.4",
+    "kafkajs": "^2.2.4"
+  }
+}
