@@ -8,7 +8,7 @@
     "postinstall": "prisma generate",
     "dev": "node --import=tsx --watch-path=./src ./src/index.ts",
     "build": "npx tsc",
-    "db:deploy": "npx prisma migrate deploy",
+    "db:deploy": "npx prisma migrate deploy && npx prisma db seed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "prisma": {
