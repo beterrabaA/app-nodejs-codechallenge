@@ -11,3 +11,8 @@ export enum EVENTS {
   APPROVED = "transaction-approved",
   REJECTED = "transaction-rejected",
 }
+
+export interface TrMessage {
+  id: string;
+  value: number;
+}
