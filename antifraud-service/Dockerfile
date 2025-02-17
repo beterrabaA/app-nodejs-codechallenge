@@ -1,11 +1,11 @@
 FROM node:22.14-alpine3.21
 
-WORKDIR /app
+WORKDIR /usr/src/app
+
+COPY package.json package-lock.json ./
+
+RUN npm ci
 
 COPY . .
 
-RUN npm install
-
-RUN npm run build
-
-ENTRYPOINT ["node", ".dist/index.js"]
+CMD ["sh", "-c", "npm run build && npm start"]

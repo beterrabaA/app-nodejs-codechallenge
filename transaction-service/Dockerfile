@@ -1,13 +1,13 @@
-FROM node:22.13
+FROM node:22.14-alpine3.21
 
-WORKDIR /app
+WORKDIR /usr/src/app
+
+COPY package.json package-lock.json ./
 
 COPY . .
 
-RUN npm install
+RUN npm ci
 
 RUN npm run build
 
-EXPOSE 4000
-
-ENTRYPOINT ["node", ".dist/index.js"]
+CMD ["sh", "-c", "npm run db:deploy && npm start"]
