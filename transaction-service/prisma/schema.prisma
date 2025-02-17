@@ -14,19 +14,19 @@ datasource db {
 }
 
 model Transaction {
-  id        String   @id @unique @default(uuid(7))
-  idDebit   String   @unique
-  idCredit  String   @unique
-  typeId    Int
-  value     Float
-  status    Status   @default(PENDING)
-  createdAt DateTime @default(now()) @db.Timestamptz()
-  updatedAt DateTime @updatedAt @db.Timestamptz()
+  id         String   @id @unique @default(uuid(7))
+  idDebit    String   @unique
+  idCredit   String   @unique
+  transferId Int
+  value      Float
+  status     Status   @default(PENDING)
+  createdAt  DateTime @default(now()) @db.Timestamptz()
+  updatedAt  DateTime @updatedAt @db.Timestamptz()
 
-  trType TransactionType @relation(fields: [typeId], references: [id], onDelete: Cascade)
+  trType TransferType @relation(fields: [transferId], references: [id], onDelete: Cascade)
 }
 
-model TransactionType {
+model TransferType {
   id          Int           @id @default(autoincrement())
   name        String
   Transaction Transaction[]

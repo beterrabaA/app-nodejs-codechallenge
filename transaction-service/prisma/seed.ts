@@ -2,7 +2,7 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function seed() {
-  await prisma.transactionType.createMany({
+  await prisma.transferType.createMany({
     data: [
       { name: "ATM" },
       { name: "Charge" },
