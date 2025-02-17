@@ -24,7 +24,6 @@ export const connectConsumer = async () => {
           } else {
             emitTrStatus(event, EVENTS.REJECTED);
           }
-          console.log(event);
         } else {
           console.log("invalid message");
         }
