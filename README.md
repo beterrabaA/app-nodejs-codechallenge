@@ -226,12 +226,12 @@ Allows search transactions by Id
     data: {
         getTransactions: {
           id: "019515de-b304-76a0-a15d-954286f5eeaf",
-                idDebit: "3dfbe8b2-564f-4275-8d76-f47c9db3cf53",
-                idCredit: "3da480a2-4319-4cc5-81f3-f05c378b78a3",
-                transferId: 5,
-                status: "ACCEPTED",
-                value: 999.99,
-                createdAt: "1740000991"
+          idDebit: "3dfbe8b2-564f-4275-8d76-f47c9db3cf53",
+          idCredit: "3da480a2-4319-4cc5-81f3-f05c378b78a3",
+          transferId: 5,
+          status: "ACCEPTED",
+          value: 999.99,
+          createdAt: "1740000991"
         }
     }
     }
