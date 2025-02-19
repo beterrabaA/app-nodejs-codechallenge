@@ -200,3 +200,39 @@ Allows list all transactions created
     }
   }
   ```
+
+#### Getting a especific transactions using Id
+
+Allows search transactions by Id
+. _All field are optionals(id,idDebit,idCredit,transferId,status,value,createdAt)_
+
+- **Graphql query**:
+
+  ```graphql
+  query {
+    getTransaction(id: "019515de-b304-76a0-a15d-954286f5eeaf") {
+      id
+      idCredit
+      status
+      value
+    }
+  }
+  ```
+
+- **Response**:
+
+  ```graphql
+    {
+    data: {
+        getTransactions: {
+          id: "019515de-b304-76a0-a15d-954286f5eeaf",
+                idDebit: "3dfbe8b2-564f-4275-8d76-f47c9db3cf53",
+                idCredit: "3da480a2-4319-4cc5-81f3-f05c378b78a3",
+                transferId: 5,
+                status: "ACCEPTED",
+                value: 999.99,
+                createdAt: "1740000991"
+        }
+    }
+    }
+  ```
