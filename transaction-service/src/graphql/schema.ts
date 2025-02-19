@@ -60,7 +60,7 @@ const Transaction = new GraphQLObjectType({
     id: { type: GraphQLString },
     idDebit: { type: GraphQLString },
     idCredit: { type: GraphQLString },
-    typeId: { type: GraphQLInt },
+    transferId: { type: GraphQLInt },
     value: { type: GraphQLFloat },
     status: { type: StatusType },
     createdAt: { type: GraphQLString },
