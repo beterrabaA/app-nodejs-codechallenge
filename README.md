@@ -212,9 +212,12 @@ Allows search transactions by Id
   query {
     getTransaction(id: "019515de-b304-76a0-a15d-954286f5eeaf") {
       id
+      idDebit
       idCredit
+      transferId
       status
       value
+      createdAt
     }
   }
   ```
