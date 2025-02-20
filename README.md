@@ -37,7 +37,6 @@ Every transaction with a value greater than 1000 should be rejected.
 Create a `.env` file in the root directory and add any required environment variables (e.g., API keys, database URLs). Check `.env.example` for a template.
 
 ```env
-POSTGRES_HOST='your_host'
 POSTGRES_USER='database_username'
 POSTGRES_PASSWORD='database_password'
 POSTGRES_PORT=database_external_port
